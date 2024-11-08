@@ -1,0 +1,40 @@
+/* ============= Enlarge tour image and add yellow glow on hover ============= */
+.tour__img img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and glowing */
+}
+
+
+.tour__img img:hover {
+    transform: scale(1.1); /* Enlarge the image by 10% */
+    box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.7); /* Yellow glow effect */
+}
+/* =============  =============  =============  =============  ================= */ 
+
+
+
+
+
+
+.card {
+    border: none !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.tour__img {
+    position: relative;
+}
+
+.tour__img span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    z-index: 10;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px 0 0 0;
+}
