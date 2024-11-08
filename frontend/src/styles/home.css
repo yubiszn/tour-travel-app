@@ -16,9 +16,31 @@
 
 
 
-.hero__content h1 .highlight{
-    color: var(--secondary-color);
-}
+
+/* ========== Making the word memories bounce  ========== */
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); /* Start and end at the original position */
+    }
+    50% {
+      transform: translateY(-10px); /* Move up by 10px */
+    }
+  }
+  
+  .hero__content h1 .highlight {
+    color: var(--secondary-color); /* Ensure the color stays the secondary color */
+    margin-left: 10px; /* moves the word 'memories' a little to the right */
+  }
+  
+  .bounce {
+    display: inline-block; /* Ensures animation works on inline text */
+    animation: bounce 1s ease-in-out infinite; /* Apply the bounce animation */
+  }
+  /* =============  =============  =============  =============  ================= */ 
+
+
+
+
 
 
 
@@ -29,13 +51,37 @@
 }
 
 
+
+
+
+
+
+/* ============= Enlarge image/video and add yellow glow on hover  ============= */
 .hero__img-box img, .hero__img-box video {
     width: 100%;
     height: 350px;
     border-radius: 20px;
     border: 1px solid var(--secondary-color);
     object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and glowing */
 }
+
+/* On hover */
+.hero__img-box img:hover, .hero__img-box video:hover {
+    transform: scale(1.1); /* Enlarge the image/video by 10% */
+    box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.7); /* Yellow glow effect */
+}
+
+/* =============  =============  =============  =============  ================= */ 
+
+
+
+
+
+
+
+
+
 
 .hero__content{
     padding-top: 3.5rem;
@@ -44,3 +90,16 @@
 .hero__img-box{
     padding-top: 2rem;
 }
+
+.services__subtitle {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #ee6e6e;
+    font-family: var(--subtitle-font-name);
+}
+
+.services__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+

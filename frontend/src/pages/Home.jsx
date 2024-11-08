@@ -7,10 +7,13 @@ import heroImgVideo from '../assets/images/hero-video.mp4'
 import worldImg from '../assets/images/world.png'
 import Subtitle from '../shared/Subtitle'
 import SearchBar from '../shared/SearchBar'
+import ServiceList from '../services/ServiceList';
+
 
 
 const Home = () => {
-    return <>
+    return (
+    <>
     
     {/*============== HERO SECTION ==============*/}
     <section>
@@ -24,7 +27,7 @@ const Home = () => {
                         </div>
                         <h1>
                             Traveling opens the door to creating 
-                            <span className='highlight'> memories</span>
+                            <span className="highlight bounce"> memories</span>
                             </h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Tempore consequatur voluptatum dicta quo beatae enim nostrum
@@ -62,7 +65,19 @@ const Home = () => {
     </section>
 
         {/*============== HERO SECTION ==============*/}
+        <section>
+            <Container>
+                <Row>
+                    <Col lg='3'>
+                        <h5 className='services__subtitle'>What we serve</h5>
+                        <h2 className='services__title'>We offer our best services</h2>
+                    </Col>
+                    <ServiceList />
+                </Row>
+            </Container>
+        </section>
 
     </>
+    );
 };
 export default Home
